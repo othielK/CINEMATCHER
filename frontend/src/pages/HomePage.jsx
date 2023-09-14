@@ -59,9 +59,7 @@ export default function HomePage1() {
 
   const getNewMovie = () => {
     axios
-      .get("https://api.themoviedb.org/3/movie/upcoming", {
-        params: { apiKey },
-      })
+      .get(`https://api.themoviedb.org/3/movie/upcoming?api_key=${apiKey}`)
       .then((response) => {
         setNewMovie(response.data.results);
       });
