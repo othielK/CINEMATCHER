@@ -9,7 +9,7 @@ import Home from "../components/Home";
 import "../styles/Homepage.css";
 
 const apiKey = import.meta.env.VITE_API_KEY;
-export default function HomePage1() {
+export default function HomePage() {
   const settings = {
     infinite: false,
     speed: 500,
