@@ -6,7 +6,7 @@ import noimage from "../assets/images/no-image.jpg";
 const getImage = (path) => `https://image.tmdb.org/t/p/w300/${path}`;
 export default function Home({ movie }) {
   if (!movie) {
-    return <h1>appuyer bouton</h1>;
+    return <h1>CLICK</h1>;
   }
   return (
     <div className="card_movie">
@@ -19,7 +19,8 @@ export default function Home({ movie }) {
 
       <h4>{movie.original_title}</h4>
       <p>
-        {movie.vote_average} <span>&#9733;</span>
+        {Math.round(movie.vote_average * 10) / 10}
+        <span>&#9733;</span>
       </p>
     </div>
   );
