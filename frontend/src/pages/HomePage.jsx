@@ -4,7 +4,7 @@ import axios from "axios";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Home from "../components/Home";
 import "../styles/Homepage.css";
 
@@ -94,7 +94,9 @@ export default function HomePage() {
         <div className="cards">
           <Slider {...settings}>
             {newMovie.map((movie) => (
-              <Home key={movie.id} movie={movie} />
+              <Link key={movie.id} to={`/movie/${movie.id}`}>
+                <Home key={movie.id} movie={movie} />
+              </Link>
             ))}
           </Slider>
         </div>
@@ -105,7 +107,9 @@ export default function HomePage() {
         <div className="cards">
           <Slider {...settings}>
             {fantasyMovie.map((movie) => (
-              <Home key={movie.id} movie={movie} />
+              <Link key={movie.id} to={`/movie/${movie.id}`}>
+                <Home key={movie.id} movie={movie} />
+              </Link>
             ))}
           </Slider>
         </div>
@@ -116,7 +120,9 @@ export default function HomePage() {
         <div className="cards">
           <Slider {...settings}>
             {adventureMovie.map((movie) => (
-              <Home key={movie.id} movie={movie} />
+              <Link key={movie.id} to={`/movie/${movie.id}`}>
+                <Home key={movie.id} movie={movie} />
+              </Link>
             ))}
           </Slider>
         </div>
