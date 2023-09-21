@@ -10,13 +10,11 @@ export default function Home({ movie }) {
   }
   return (
     <div className="card_movie">
-      {/* <img src={getImage(movie.poster_path)} alt={movie.original_title} /> */}
       {movie.poster_path === null ? (
         <img src={noimage} />
       ) : (
         <img src={getImage(movie.poster_path)} />
       )}
-
       <h4>{movie.original_title}</h4>
       <p>
         {Math.round(movie.vote_average * 10) / 10}
