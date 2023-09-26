@@ -107,7 +107,7 @@ export default function MovieDetails() {
 
         <div className="dansgenre">
           <div className="cards">
-            {newMovie.map((movie) => (
+            {newMovie.slice(0, 6).map((movie) => (
               <Home key={movie.id} movie={movie} />
             ))}
           </div>

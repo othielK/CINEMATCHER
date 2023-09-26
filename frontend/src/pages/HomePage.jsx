@@ -93,11 +93,14 @@ export default function HomePage() {
         <h3>Nouveautés</h3>
         <div className="cards">
           <Slider {...settings}>
-            {newMovie.map((movie) => (
-              <Link key={movie.id} to={`/movie/${movie.id}`}>
-                <Home key={movie.id} movie={movie} />
-              </Link>
-            ))}
+            {newMovie.map(
+              (movie) =>
+                movie.vote_average !== 0 && (
+                  <Link key={movie.id} to={`/movie/${movie.id}`}>
+                    <Home key={movie.id} movie={movie} />
+                  </Link>
+                )
+            )}
           </Slider>
         </div>
       </div>
@@ -106,11 +109,14 @@ export default function HomePage() {
         <h3>Comédie</h3>
         <div className="cards">
           <Slider {...settings}>
-            {fantasyMovie.map((movie) => (
-              <Link key={movie.id} to={`/movie/${movie.id}`}>
-                <Home key={movie.id} movie={movie} />
-              </Link>
-            ))}
+            {fantasyMovie.map(
+              (movie) =>
+                movie.vote_average !== 0 && (
+                  <Link key={movie.id} to={`/movie/${movie.id}`}>
+                    <Home key={movie.id} movie={movie} />
+                  </Link>
+                )
+            )}
           </Slider>
         </div>
       </div>
@@ -119,11 +125,14 @@ export default function HomePage() {
         <h3>Action</h3>
         <div className="cards">
           <Slider {...settings}>
-            {adventureMovie.map((movie) => (
-              <Link key={movie.id} to={`/movie/${movie.id}`}>
-                <Home key={movie.id} movie={movie} />
-              </Link>
-            ))}
+            {adventureMovie.map(
+              (movie) =>
+                movie.vote_average !== 0 && (
+                  <Link key={movie.id} to={`/movie/${movie.id}`}>
+                    <Home key={movie.id} movie={movie} />
+                  </Link>
+                )
+            )}
           </Slider>
         </div>
       </div>
