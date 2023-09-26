@@ -45,11 +45,11 @@
 }
 .card_movie > p {
   margin-left: 3px;
-  font-size: 12px;
+  font-size: 1rem;
 }
 .card_movie > p > span {
   margin-left: 10px;
-  font-size: 10px;
+  font-size: 1rem;
   color: #fad946;
 }
 h3 {
