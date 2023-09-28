@@ -9,7 +9,6 @@ import "slick-carousel/slick/slick-theme.css";
 import "../styles/Moviedetails.css";
 import noimage from "../assets/images/no-image.jpg";
 import Home from "../components/Home";
-import "../styles/favorites.css";
 import heart from "../assets/images/heart.png";
 
 const apiKey = import.meta.env.VITE_API_KEY;
