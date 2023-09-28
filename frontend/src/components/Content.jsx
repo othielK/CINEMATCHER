@@ -7,6 +7,7 @@ import Genres from "../pages/Genres";
 import SearchResult from "../pages/SearchResult";
 import Recherche from "./Recherche";
 import MovieDetails from "../pages/MovieDetails";
+import NotFound from "../pages/PageNotFound";
 
 export default function Content() {
   return (
@@ -20,6 +21,7 @@ export default function Content() {
       <Route path="/genders" element={<Genres />} />
       <Route path="/search" element={<Recherche />} />
       <Route path="/search/:userResearch" element={<SearchResult />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }
