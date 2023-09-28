@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import HomePage from "../pages/HomePage";
-import Favoris from "../pages/Favoris";
+import Favorites from "../pages/Favorites";
 import NouveautesEtPopulaires from "../pages/NouveautesEtPopulaires";
 import Humeurs from "../pages/Humeurs";
 import Genres from "../pages/Genres";
@@ -12,9 +12,8 @@ export default function Content() {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="/favorites" element={<Favoris />} />
+      <Route path="/favorites" element={<Favorites />} />
       <Route path="/movie/:id" element={<MovieDetails />} />
-      <Route path="/favoris" element={<Favoris />} />
       <Route path="/newandpopular" element={<NouveautesEtPopulaires />} />
       <Route path="/moods" element={<Humeurs />} />
       <Route path="/genders" element={<Genres />} />

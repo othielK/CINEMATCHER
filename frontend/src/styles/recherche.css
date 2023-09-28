@@ -1,13 +1,5 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 
-/* .search_container {
-  position: absolute;
-  background-color: black;
-  position: relative;
-  border-radius: 30px;
-  padding: 3px 50px 3px 10px;
-} */
-
 .search_container {
   background-color: black;
   border: 2px solid white;
@@ -50,6 +42,12 @@
   float: right;
 }
 
+.search_result {
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
 @media (min-width: 401px) {
   .search_container {
     background-color: black;
@@ -88,21 +86,4 @@
     height: 37px;
     outline: 0;
   }
-
-  /* .search_bar {
-    display: flex;
-    justify-content: space-between;
-    margin: 16px auto;
-    padding: 0;
-    width: 75%;
-  }
-
-  #site-search {
-    padding-right: 50px;
-  }
-
-  #search-btn {
-    margin: 8px;
-    padding: 16px 40px;
-  } */
 }

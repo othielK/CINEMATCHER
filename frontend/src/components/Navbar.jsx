@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { useState, useEffect } from "react";
 import "../styles/navbar.css";
+import { Link } from "react-router-dom";
 import cinematcherLogo from "../assets/img/cinematcher-logo2.png";
 
 function Navbar() {
@@ -51,9 +52,9 @@ function Navbar() {
               <a href="#" onClick={closeMenu}>
                 Nouveautés & Popularités
               </a>
-              <a href="#" onClick={closeMenu}>
+              <Link to="/favorites" onClick={closeMenu}>
                 Mes favoris
-              </a>
+              </Link>
             </ul>
           </div>
         </div>
