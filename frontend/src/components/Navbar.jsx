@@ -1,6 +1,7 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable react/jsx-no-undef */
 import { useState, useEffect } from "react";
 import "../styles/navbar.css";
+import { Link } from "react-router-dom";
 import cinematcherLogo from "../assets/img/cinematcher-logo2.png";
 
 function Navbar() {
@@ -39,21 +40,21 @@ function Navbar() {
 
           <div className="menu-items">
             <ul className="menu-list">
-              <a href="#" onClick={closeMenu}>
+              <Link to="/" onClick={closeMenu}>
                 Accueil
-              </a>
-              <a href="#" onClick={closeMenu}>
+              </Link>
+              <Link to="/genders" onClick={closeMenu}>
                 Genres
-              </a>
-              <a href="#" onClick={closeMenu}>
+              </Link>
+              <Link to="/moods" onClick={closeMenu}>
                 Humeur
-              </a>
-              <a href="#" onClick={closeMenu}>
+              </Link>
+              <Link to="/newandpopular" onClick={closeMenu}>
                 Nouveautés & Popularités
-              </a>
-              <a href="#" onClick={closeMenu}>
+              </Link>
+              <Link to="/favoris" onClick={closeMenu}>
                 Mes favoris
-              </a>
+              </Link>
             </ul>
           </div>
         </div>
