@@ -1,3 +1,6 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable react/button-has-type */
 import { useParams } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
@@ -6,6 +9,8 @@ import "slick-carousel/slick/slick-theme.css";
 import "../styles/Moviedetails.css";
 import noimage from "../assets/images/no-image.jpg";
 import Home from "../components/Home";
+import "../styles/favorites.css";
+import heart from "../assets/images/heart.png";
 
 const apiKey = import.meta.env.VITE_API_KEY;
 const getImage = (path) => `https://image.tmdb.org/t/p/original/${path}`;
@@ -14,7 +19,6 @@ export default function MovieDetails() {
   const { id } = useParams();
   const [moviedet, setMoviedet] = useState("");
   const [castdata, setCastdata] = useState([]);
-  //  const [video, setVideo] = useState([]);
   const [newMovie, setNewMovie] = useState([]);
 
   const getNewMovie = () => {
@@ -51,7 +55,15 @@ export default function MovieDetails() {
     getNewMovie();
   }, []);
 
-  // console.log(moviedet);
+  // eslint-disable-next-line no-shadow
+  const addMovieToFavorites = (id) => {
+    const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    if (!favorites.includes(id)) {
+      favorites.push(id);
+      localStorage.setItem("favorites", JSON.stringify(favorites));
+    }
+  };
+
   return (
     moviedet && (
       <div className="movie">
@@ -65,6 +77,14 @@ export default function MovieDetails() {
         <div className="movie_detail">
           <div className="movie_title">
             <h1>{moviedet.original_title}</h1>
+            <span>
+              <img
+                className="heart"
+                src={heart}
+                alt="Ajouter au favoris"
+                onClick={() => addMovieToFavorites(moviedet.id)}
+              />
+            </span>
           </div>
 
           <div className="movie_desc">

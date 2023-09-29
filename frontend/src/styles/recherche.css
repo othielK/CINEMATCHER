@@ -36,6 +36,12 @@
   float: right;
 }
 
+.search_result {
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
 @media (min-width: 401px) {
   .search_container {
     width: 25%;

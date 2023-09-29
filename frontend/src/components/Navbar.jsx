@@ -54,8 +54,8 @@ function Navbar() {
               <Link to="/newandpopular" onClick={closeMenu}>
                 Nouveautés & Popularités
               </Link>
-              <Link to="/favoris" onClick={closeMenu}>
-                Mes favoris
+              <Link to="/favorites" onClick={closeMenu}>
+                Favoris
               </Link>
             </ul>
           </div>
