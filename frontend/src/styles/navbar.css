@@ -136,6 +136,12 @@
     top: 15%;
     left: 8%;
   }
+
+  .desktop_h2-nav {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
 }
 
 @media (min-width: 781px) {
