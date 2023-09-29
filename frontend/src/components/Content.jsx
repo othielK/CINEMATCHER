@@ -3,13 +3,11 @@ import HomePage from "../pages/HomePage";
 import Favoris from "../pages/Favoris";
 import NouveautesEtPopulaires from "../pages/NouveautesEtPopulaires";
 import Humeurs from "../pages/Humeurs";
-import Genres from "../pages/Genres";
 import SearchResult from "../pages/SearchResult";
 import Recherche from "./Recherche";
 import MovieDetails from "../pages/MovieDetails";
 import NotFound from "../pages/PageNotFound";
 import GenreMovies from "../pages/GenreMovies";
-
 
 export default function Content() {
   return (
