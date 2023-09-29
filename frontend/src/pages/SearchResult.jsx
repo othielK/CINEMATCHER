@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Home from "../components/Home";
@@ -23,10 +23,14 @@ export default function SearchResult() {
 
   return (
     <>
-      <h2>Resultat de la recherche pour : {userResearch}</h2>
+      <h2 className="search_result">
+        Resultat de la recherche pour : {userResearch}
+      </h2>
       <div>
         {data.map((result) => (
-          <Home key={result.id} movie={result} />
+          <Link key={result.id} to={`/movie/${result.id}`}>
+            <Home key={result.id} movie={result} />
+          </Link>
         ))}
       </div>
     </>
