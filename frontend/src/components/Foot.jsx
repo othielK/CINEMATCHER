@@ -1,38 +1,45 @@
+import "../styles/footer.css";
+import { Link } from "react-router-dom";
+
 function Foot() {
   return (
     <footer>
       <div className="Footer">
         <div className="icons">
           <div className="img twitter">
-            <img
-              src="https://cdn.discordapp.com/attachments/1146802881538834433/1149618248120274944/twitter-x-logo-101C7D2420-seeklogo.com.png"
-              alt=""
-            />
+            <Link to="/Twitter">
+              <img
+                src="https://cdn.discordapp.com/attachments/1146802881538834433/1149618248120274944/twitter-x-logo-101C7D2420-seeklogo.com.png"
+                alt=""
+              />
+            </Link>
           </div>
 
           <div className="img instagram">
-            <img
-              src="https://cdn.discordapp.com/attachments/1145700870131040297/1149633209362022480/instagram.png"
-              alt=""
-            />
+            <Link to="/Instagram">
+              <img
+                src="https://cdn.discordapp.com/attachments/1145700870131040297/1149633209362022480/instagram.png"
+                alt=""
+              />
+            </Link>
           </div>
         </div>
 
         <div className="onglets">
           <div className="contact">
-            <h2>Contactez nous</h2>
+            <Link to="/Contactez-vous">Contactez nous</Link>
           </div>
 
           <div className="cookies">
-            <h2>Préférences cookies</h2>
+            <Link to="/Cookies">Préférences cookies</Link>
           </div>
 
           <div className="utilisations">
-            <h2>Conditions d'utilisations</h2>
+            <Link to="/blablabla">Conditions d'utilisations</Link>
           </div>
 
           <div className="medias">
-            <h2>Centre de médias</h2>
+            <Link to="/Medias">Centre de médias</Link>
           </div>
         </div>
 
