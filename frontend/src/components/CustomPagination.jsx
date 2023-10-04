@@ -1,7 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from "react";
-// import { Pagination } from "@material-ui/lab";
-// import { ThemeProvider, createTheme } from "@mui/material/styles";
 import PropTypes from "prop-types";
 import { Pagination } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
@@ -33,7 +31,7 @@ export default function CustomPagination({ setPage, pageNumber }) {
           <Pagination
             count={pageNumber}
             color="primary"
-            variant="outlined"
+            // variant="outlined"
             onChange={(e) => handlePageChange(e.target.textContent)}
           />
         </div>
