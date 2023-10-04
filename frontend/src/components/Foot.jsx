@@ -1,7 +1,7 @@
 function Foot() {
   return (
     <footer>
-      <div className="Footer">
+      <div className="footer">
         <div className="icons">
           <div className="img twitter">
             <img
