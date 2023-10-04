@@ -20,7 +20,6 @@ export default function Genres({
         `https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}&language=en-US`
       )
       .then((response) => {
-        // console.log(response.data.genres);
         setGenres(response.data.genres);
       });
   };
@@ -48,7 +47,12 @@ export default function Genres({
       <h3>Genres</h3>
       {selectedGenres.map((genre) => (
         <Chip
-          style={{ fontSize: "1em", margin: "4px" }}
+          style={{
+            fontSize: "1em",
+            margin: "4px",
+            backgroundColor: "#FFDE59",
+            color: "black",
+          }}
           label={genre.name}
           key={genre.id}
           color="primary"
@@ -60,7 +64,7 @@ export default function Genres({
         <Chip
           onClick={() => handleAddGenres(genre)}
           clickable
-          style={{ fontSize: "1em", margin: "4px" }}
+          style={{ fontSize: "1em", margin: "4px", backgroundColor: "#3456FF" }}
           label={genre.name}
           // variant="outlined"
           color="primary"
