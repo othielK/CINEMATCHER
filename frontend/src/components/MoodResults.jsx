@@ -3,7 +3,8 @@
 import React, { useEffect, useState } from "react";
 // eslint-disable-next-line import/no-extraneous-dependencies
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
+import Home from "./Home";
 
 const apiKey = import.meta.env.VITE_API_KEY;
 
@@ -21,6 +22,18 @@ export default function MoodResults() {
         console.info(response.data);
       });
   }, []);
+  console.info(humeur, temps, origine);
 
-  return <p>coucou</p>;
+  return (
+    <>
+      <h2>Voici ta sélection :</h2>
+      <div>
+        {mood.map((result) => (
+          <Link key={result.id} to={`/movie/${result.id}`}>
+            <Home key={result.id} movie={result} />
+          </Link>
+        ))}
+      </div>
+    </>
+  );
 }

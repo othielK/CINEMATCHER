@@ -66,8 +66,7 @@ label img {
 .cardTime img {
   width: 9rem;
   height: 10rem;
-  /* margin-top: 30px; */
-  /* margin-left: 20px; */
+  margin-top: 30px;
   border-radius: 5px 5px;
   cursor: pointer;
   overflow: hidden;
@@ -88,8 +87,8 @@ label img {
 }
 
 .cardEvasion {
-  width: 6rem;
-  height: 4rem;
+  width: 5rem;
+  height: 3rem;
   margin-top: 30px;
   margin-left: 20px;
   cursor: pointer;
@@ -98,12 +97,20 @@ label img {
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
+  border: solid;
+  border-radius: 5px;
+}
+
+.cardEvasion:hover {
+  background-color: #a68c77;
+  color: white;
 }
 
 .cardsEvasion {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin-right: 30px;
 }
 
 button {
@@ -123,5 +130,6 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 25px;
+  margin-top: 50px;
+  margin-right: 16px;
 }

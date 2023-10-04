@@ -4,22 +4,21 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import MoodCards from "../components/MoodCards";
-// import MoodResults from "../components/MoodResults";
 
 export default function Mood() {
   const [humeur, setHumeur] = useState([]);
 
   const onOptionChange = (e) => {
     if (e.target.value === "Heureux") {
-      setHumeur(35, 10402);
+      setHumeur(35);
     } else if (e.target.value === "Pensif") {
-      setHumeur(80, 99);
+      setHumeur(80);
     } else if (e.target.value === "Fatigué") {
-      setHumeur(878, 10751);
+      setHumeur(878);
     } else if (e.target.value === "Neutre") {
-      setHumeur(18, 53);
+      setHumeur(18);
     } else if (e.target.value === "Triste") {
-      setHumeur(10749, 12);
+      setHumeur(10749);
     }
   };
 
@@ -35,16 +34,16 @@ export default function Mood() {
   const [origine, setOrigine] = useState([]);
   const onOption2Change = (e) => {
     if (e.target.value === "Non") {
-      setOrigine("us,fr");
+      setOrigine("fr");
     } else if (e.target.value === "Oui") {
-      setOrigine("it,in,ch");
+      setOrigine("it");
     }
   };
 
   const navigate = useNavigate();
 
   const handleSubmit = () => {
-    navigate(`/moods/${humeur}${temps}${origine}`);
+    navigate(`/moods/${humeur}/${temps}/${origine}`);
   };
 
   return (
@@ -203,7 +202,7 @@ export default function Mood() {
             id="non"
             onChange={onOption2Change}
           />
-          <label htmlFor="oui">
+          <label htmlFor="non">
             <h3>Non</h3>
           </label>
         </div>
@@ -216,11 +215,8 @@ export default function Mood() {
       <div className="Btn">
         <button onClick={() => handleSubmit()}> Générer ma sélection</button>
       </div>
-      {/* {humeur.map((movie) => <MoodResults key={movie.id} movie={movie} />)} */}
-      {/* {humeur.map((movie) => <p>{movie.id}</p>)} */}
 
       <MoodCards />
-      {/* <MoodResults /> */}
     </div>
   );
 }
