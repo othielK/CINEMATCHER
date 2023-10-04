@@ -1,7 +1,10 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 // import { useParams } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Home from "../components/Home";
+import bin from "../assets/images/bin.png";
 import "../styles/favorites.css";
 
 const apiKey = import.meta.env.VITE_API_KEY;
@@ -26,6 +29,7 @@ export default function Favorites() {
 
     Promise.all(requests).then((responses) => {
       setData(responses);
+      // console.log(responses)
     });
   }, []);
   return (
@@ -33,9 +37,14 @@ export default function Favorites() {
       {data.map((movie) => (
         <div key={movie.id}>
           <Home movie={movie.data} />
-          <button type="button" onClick={() => removeFavorite(movie.id)}>
-            Supprimer des favoris
-          </button>
+          <span>
+            <img
+              className="bin"
+              src={bin}
+              alt="Supprimer des favoris"
+              onClick={() => removeFavorite(movie.data.id)}
+            />
+          </span>
         </div>
       ))}
     </div>
