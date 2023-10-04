@@ -1,0 +1,50 @@
+    const [moviedet, setMoviedet] = useState("");
+const getImage = (path) => `https://image.tmdb.org/t/p/original/${path}`;
+
+const getNewMovie = () => {
+        axios
+          .get(`https://api.themoviedb.org/3/movie/upcoming?api_key=${apiKey}`)
+          .then((response) => {
+            setMoviedet(response.data.results);
+          });
+      };
+
+      useEffect(() => {
+        getNewMovie();
+      }, []);
+
+moviedet && (
+        // {mood.map((movie) => (
+    <div className="movie">
+        
+        <div className="movieintro">
+          {moviedet.backdrop_path === null ? (
+            <img src="src/assets/images/sablier2h10 karolina-grabowska.jpg" alt="" />
+          ) : (
+            <img src={getImage(moviedet.backdrop_path)} alt="" />
+          )}
+        </div>
+        <div className="movie_detail">
+          <div className="movie_title">
+            <h1>{moviedet.original_title}</h1>
+          </div>
+
+          <div className="movie_desc">
+            {Math.round(moviedet.vote_average * 10) / 10}
+            <span>&#9733;</span>
+            <br /> <br />
+            <p>Release Date: {moviedet.release_date}</p>
+            <p>Run Time: {moviedet.runtime} min</p>
+          </div>
+
+          <div className="movie_genres">
+            {moviedet.genres.map((genre) => (
+              <span className="movie_genre" id={genre.id}>
+                {genre.name}
+              </span>
+            ))}
+          </div>
+        </div>
+    </div>)
+    // ))}
+    )}  
