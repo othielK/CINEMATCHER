@@ -1,0 +1,78 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+.search_container {
+  background-color: black;
+  border: 2px solid white;
+  border-radius: 30px;
+  padding: 3px 0px 3px 10px;
+  height: 40px;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 16px;
+  float: right;
+  margin-right: 16px;
+}
+
+.search-box {
+  height: 35px;
+  font-size: 15px;
+  width: 50%;
+  cursor: pointer;
+}
+.search-button {
+  right: 4px;
+  top: 4px;
+  background-color: #ffde59;
+  border-radius: 0% 30px 30px 0%;
+  border: 2px solid white;
+  color: black;
+  width: 80px;
+  height: 37px;
+  outline: 0;
+  float: right;
+}
+
+.search_result {
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+@media (min-width: 401px) {
+  .search_container {
+    width: 25%;
+    float: right;
+    margin-right: 16px;
+  }
+  .search-box {
+    background-color: transparent;
+    height: 35px;
+    font-size: 15px;
+    width: 100%;
+    cursor: pointer;
+  }
+  .search-button {
+    right: 4px;
+    top: 4px;
+    background-color: #ffde59;
+    border-radius: 0% 30px 30px 0%;
+    border: 2px solid white;
+    color: black;
+    width: 100px;
+    height: 37px;
+    outline: 0;
+  }
+
+  #site-search {
+    padding-right: 50px;
+  }
+
+  #search-btn {
+    margin: 8px;
+    padding: 16px 40px;
+  }
+}

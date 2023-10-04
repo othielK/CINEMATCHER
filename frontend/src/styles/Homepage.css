@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;700&family=Roboto&display=swap");
+
+* {
+  color: white;
+  /* border: 1px solid red */
+}
+body {
+  background-color: #0c1117;
+  color: white;
+  margin-left: 15px;
+}
+:root {
+  --h3-padding: 10px;
+  --h3-font-size: 1.2rem;
+  --font-color: white;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.card_movie {
+  width: 120px;
+  overflow: hidden;
+  transition: 0.3s;
+  animation: ease-in;
+  display: inline-block;
+  height: 200px;
+  margin: 5px 8px 10px 8px;
+}
+.card_movie:hover {
+  transform: scale(1.1);
+  /* box-shadow: 0px 0px 15px 0px; */
+}
+.card_movie > img {
+  overflow: hidden;
+  height: 150px;
+  width: 100%;
+  border-radius: 5%;
+}
+.card_movie > h4 {
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  text-align: left;
+  /* overflow: hidden; */
+  white-space: nowrap;
+  margin-left: 3px;
+}
+.card_movie > p {
+  margin-left: 3px;
+  font-size: 1rem;
+}
+.card_movie > p > span {
+  margin-left: 10px;
+  font-size: 1rem;
+  color: #fad946;
+}
+h3 {
+  font-size: var(--h3-font-size);
+  padding: var(--h3-padding);
+  color: var(--font-color);
+}
+.header_nouveautés {
+  width: 90%;
+  margin: auto;
+}
+.card_comédie {
+  width: 90%;
+  margin: auto;
+}
+
+.card_action {
+  width: 90%;
+  margin: auto;
+}
+
+.genres_test {
+  z-index: 900;
+  text-align: center;
+}
+
+#pagination_number > nav > ul > li > button {
+  color: white;
+}
