@@ -7,7 +7,7 @@
 body {
   background-color: #0c1117;
   font-family: "League Spartan";
-   color: white;
+  color: white;
   margin-left: 15px;
 }
 :root {
@@ -84,6 +84,4 @@ h3 {
 
 #pagination_number > nav > ul > li > button {
   color: white;
- 
 }
-
