@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;700&family=Roboto&display=swap");
+
+* a:not(.menu-list) {
+  overflow-y: hidden
+}
+
+a {
+  overflow: hidden;
+}
+
+body {
+  background-color: #0c1117;
+  font-family: "League Spartan";
+  color: white;
+  overflow-y: auto;
+}
+
+:root {
+  --all-h1-size: 2rem;
+  --margin-h1-left: 30px;
+  --margin-h1-bottom: 25px;
+  --h3-padding: 10px;
+  --h3-font-size: 1.2rem;
+  --p-font-size: 1rem;
+}
+
+
+
+@media (min-width: 2000px) {
+  * {
+    overflow-y: auto
+  }
+}

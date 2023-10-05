@@ -15,11 +15,12 @@ export default function Home({ movie }) {
       ) : (
         <img src={getImage(movie.poster_path)} />
       )}
+      <br />
       <h4>{movie.original_title}</h4>
-      <p>
+      <p1>
         {Math.round(movie.vote_average * 10) / 10}
         <span>&#9733;</span>
-      </p>
+      </p1>
     </div>
   );
 }

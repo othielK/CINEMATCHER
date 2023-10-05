@@ -6,23 +6,25 @@
   justify-content: center;
 }
 
-.cta-homepage {
-  background-color: #3456ff;
-  margin-top: 16px;
-  color: white;
-  border-radius: 30px;
-  padding: 1rem 2rem;
+iframe {
+  width: 50vh;
+  height: 30vh;
 }
 
 h1 {
   color: white;
+  margin-top: 2rem;
 }
 
-p {
-  font-size: 24px;
+.cta-homepage {
+  background-color: #0fa226;
+  margin-top: 16px;
+  color: white;
+  border-radius: 25px;
+  padding: 1rem 2rem;
 }
 
 .Oops a {
   color: white;
-  font-size: 24px;
+  font-size: 20px;
 }

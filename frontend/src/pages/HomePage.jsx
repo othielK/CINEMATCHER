@@ -37,7 +37,7 @@ export default function HomePage() {
       {
         breakpoint: 750,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
         },
