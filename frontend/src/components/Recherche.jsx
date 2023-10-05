@@ -24,7 +24,6 @@ function Recherche() {
         onChange={handleSearch}
       />
       <input type="submit" className="search-button" value="Recherche" />
-      {/* <button id="search-btn" type="submit"><i class="fa fa-search" /></button> */}
     </form>
   );
 }
