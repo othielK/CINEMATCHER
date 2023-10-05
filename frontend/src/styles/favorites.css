@@ -1,3 +1,15 @@
 .bin {
   width: 2%;
 }
+body{
+  margin-left: var(--margin-h1-left);
+}
+.Title_Fav > h1 {
+  font-size: var(--all-h1-size);
+  margin-left: var(--margin-h1-left);
+  margin-bottom: var(--margin-h1-left);
+}
+
+/* .cards_Favorites {
+  display: flex;
+} */

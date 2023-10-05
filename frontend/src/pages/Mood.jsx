@@ -48,7 +48,10 @@ export default function Mood() {
 
   return (
     <div>
-      <h1> Quelle est ton humeur ?</h1>
+      <div>
+        <h1>Humeur</h1>
+      </div>
+      <h3> Quelle est ton humeur ?</h3>
       <div className="cardsHumeur">
         <div className="cardHumeur">
           <input
@@ -64,7 +67,7 @@ export default function Mood() {
               src="../src/assets/images/portrait_happy.png"
               alt="Heureux/se ?"
             />
-            <h3>Heureux/se ?</h3>
+            <p>Heureux/se ?</p>
           </label>
         </div>
 
@@ -82,7 +85,7 @@ export default function Mood() {
               src="../src/assets/images/portrait_pensif.png"
               alt="Pensif/ve ?"
             />
-            <h3>Pensif/ve ?</h3>
+            <p>Pensif/ve ?</p>
           </label>
         </div>
 
@@ -100,7 +103,7 @@ export default function Mood() {
               src="../src/assets/images/portrait_fatigue.png"
               alt="Fatigué/e ?"
             />
-            <h3>Fatigué/e ?</h3>
+            <p>Fatigué/e ?</p>
           </label>
         </div>
 
@@ -118,7 +121,7 @@ export default function Mood() {
               src="../src/assets/images/portrait_neutre.png"
               alt="Neutre ?"
             />
-            <h3>Neutre ?</h3>
+            <p>Neutre ?</p>
           </label>
         </div>
 
@@ -136,12 +139,12 @@ export default function Mood() {
               src="../src/assets/images/portrait_triste.png"
               alt="Triste ?"
             />
-            <h3>Triste ?</h3>
+            <p>Triste ?</p>
           </label>
         </div>
       </div>
 
-      <h1> Combien de temps as tu devant toi ?</h1>
+      <h3> Combien de temps as-tu devant toi ?</h3>
       <div className="cardsTimes">
         <div className="cardTime">
           <input
@@ -157,7 +160,7 @@ export default function Mood() {
               src="src/assets/images/sablier2h10 karolina-grabowska.jpg"
               alt="Le temps charge"
             />{" "}
-            <h3>+ 2h10</h3>
+            <p>+ 2h10</p>
           </label>
         </div>
 
@@ -174,12 +177,12 @@ export default function Mood() {
               src="src/assets/images/sablier1h30karolina-grabowska.jpg"
               alt="Le temps charge"
             />{" "}
-            <h3>1h30</h3>
+            <p>1h30</p>
           </label>
         </div>
       </div>
 
-      <h1> As-tu envie d’évasion ?</h1>
+      <h3> As-tu envie d’évasion ?</h3>
       <div className="cardsEvasion">
         <div className="cardEvasion">
           <input
@@ -190,7 +193,7 @@ export default function Mood() {
             onChange={onOption2Change}
           />
           <label htmlFor="oui">
-            <h3>Oui</h3>
+            <p>Oui</p>
           </label>
         </div>
 
@@ -203,7 +206,7 @@ export default function Mood() {
             onChange={onOption2Change}
           />
           <label htmlFor="non">
-            <h3>Non</h3>
+            <p>Non</p>
           </label>
         </div>
       </div>

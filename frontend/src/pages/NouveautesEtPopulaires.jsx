@@ -85,6 +85,9 @@ export default function NouveautesEtPopulaires() {
   return (
     <>
       <div className="card_comédie">
+        <div>
+          <h1>Nouveautés & Popularités</h1>
+        </div>
         <h3>Popularités</h3>
         <div className="cards">
           <Slider {...settings}>
