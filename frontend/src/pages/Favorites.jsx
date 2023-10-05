@@ -34,19 +34,24 @@ export default function Favorites() {
   }, []);
   return (
     <div className="Mes_favs">
-      {data.map((movie) => (
-        <div key={movie.id}>
-          <Home movie={movie.data} />
-          <span>
-            <img
-              className="bin"
-              src={bin}
-              alt="Supprimer des favoris"
-              onClick={() => removeFavorite(movie.data.id)}
-            />
-          </span>
-        </div>
-      ))}
+      <div className="Title_Fav">
+        <h1>Favoris</h1>
+      </div>
+      <div className="cards_Favorites">
+        {data.map((movie) => (
+          <div key={movie.id}>
+            <Home movie={movie.data} />
+            <span>
+              <img
+                className="bin"
+                src={bin}
+                alt="Supprimer des favoris"
+                onClick={() => removeFavorite(movie.data.id)}
+              />
+            </span>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
