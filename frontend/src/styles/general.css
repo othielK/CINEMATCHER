@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;700&family=Roboto&display=swap");
 
 * a:not(.menu-list) {
-  overflow-y: hidden
+  overflow-y: hidden;
 }
 
 a {
@@ -28,6 +28,6 @@ body {
 
 @media (min-width: 2000px) {
   * {
-    overflow-y: auto
+    overflow-y: auto;
   }
 }

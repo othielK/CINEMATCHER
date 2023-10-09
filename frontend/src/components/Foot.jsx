@@ -43,10 +43,10 @@ function Foot() {
           </div>
         </div>
 
-        <p className="copyright">
+        <p2 className="copyright">
           {" "}
-          Copyright © 2023 Cinematcher. tous droits réservés.
-        </p>
+          Copyright © 2023 Cinematcher. Tous droits réservés.
+        </p2>
       </div>
     </footer>
   );
